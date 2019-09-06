@@ -6,3 +6,4 @@ authors = ["Andy Nagels <thereisanewway@gmail.com>"]
 [dependencies]
 actix = "0.8.3"
 actix-web = "1.0"
+libcalculatorfinance = { git = "https://github.com/nintaitrading-eu/libcalculatorfinance-rs", branch="libcalculatorfinance-rs-develop" }

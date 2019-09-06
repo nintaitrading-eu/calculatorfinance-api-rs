@@ -1,17 +1,16 @@
 extern crate actix_web;
-use actix_web::{web, App, HttpResponse, HttpServer, Responder};
+use actix_web::{web, App, HttpServer};
 
-fn index() -> impl Responder
-{
-  HttpResponse::Ok().body("Hello world!")
-}
+pub mod api_1;
 
 fn main()
 {
   HttpServer::new(||
   {
     App::new()
-      .route("/", web::get().to(index))
+      .service(
+        web::resource("/status")
+	  .route(web::get().to(api_1::status::status)))
   })
   .bind("127.0.0.1:8888")
   .unwrap()

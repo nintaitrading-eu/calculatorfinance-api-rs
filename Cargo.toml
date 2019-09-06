@@ -1,0 +1,8 @@
+[package]
+name = "capitalcommander-api-rs"
+version = "0.1.0"
+authors = ["Andy Nagels <thereisanewway@gmail.com>"]
+
+[dependencies]
+actix = "0.8.3"
+actix-web = "1.0"

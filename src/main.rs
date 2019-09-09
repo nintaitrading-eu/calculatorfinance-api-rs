@@ -21,7 +21,9 @@ fn main()
                     .route(web::get().to(api_1::general::convert_to_orig)))
 
             /* Before trade */
-            // TBD
+            .service(
+                web::resource("/calculate_shares_recommended/{pool}/{commission}/{tax}/{price}")
+                    .route(web::get().to(api_1::before_trade::calculate_shares_recommended)))
 
             /* After trade */
             // TBD

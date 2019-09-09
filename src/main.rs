@@ -24,6 +24,9 @@ fn main()
             .service(
                 web::resource("/calculate_shares_recommended/{pool}/{commission}/{tax}/{price}")
                     .route(web::get().to(api_1::before_trade::calculate_shares_recommended)))
+            .service(
+                web::resource("/calculate_leveraged_contracts/{n}")
+                    .route(web::get().to(api_1::before_trade::calculate_leveraged_contracts)))
 
             /* After trade */
             // TBD
